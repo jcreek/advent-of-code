@@ -40,35 +40,35 @@
 
         static void Part2(List<int> initialCrabPositions)
         {
-            // Using the median average is wrong here
-            // Mean average works for the example data, but not for my input
-            // Need to change how I work out the optimal horizontal position
+            // Calculate optimal position 
+            // Loop through all possible positions and work out the total fuel consumption
+            int minPosition = initialCrabPositions.Min();
+            int maxPosition = initialCrabPositions.Max();
 
+            Dictionary<int, int> possiblePositions = new Dictionary<int, int>();
 
-            double mean = initialCrabPositions.Average();
+            for (int i = minPosition; i <= maxPosition; i++)
+            {
+                possiblePositions.Add(i,CalculateTotalFuelConsumption(initialCrabPositions, i));
+            }
 
-            int meanAverage = Convert.ToInt32(mean);
+            // Find lowest fuel consumption
+            var lowestFuelConsumptionPosition = possiblePositions.OrderBy(kvp => kvp.Value).First();
+            Console.WriteLine($"Position: {lowestFuelConsumptionPosition.Key} Fuel consumption: {lowestFuelConsumptionPosition.Value}");
+        }
 
-            // int medianAverage = initialCrabPositions.OrderBy(x=>x).Skip(initialCrabPositions.Count()/2).First();
-
-            // int modalAverage = initialCrabPositions.GroupBy(n=> n).
-            //     OrderByDescending(g=> g.Count()).
-            //     Select(g => g.Key).FirstOrDefault();
-
-            Console.WriteLine($"Mean average: {meanAverage}");
-            // Console.WriteLine($"Median average: {medianAverage}");
-            // Console.WriteLine($"Modal average: {modalAverage}");
-
+        public static int CalculateTotalFuelConsumption(List<int> initialCrabPositions, int targetPosition)
+        {
             int totalFuelConsumption = 0; 
 
             foreach (int position in initialCrabPositions)
             {
                 // Find the difference
-                int difference = Math.Abs(position - meanAverage);
+                int difference = Math.Abs(position - targetPosition);
                 totalFuelConsumption += Convert.ToInt32(GetTriangularNumber(difference));
             }
 
-            Console.WriteLine($"Total fuel consumption: {totalFuelConsumption}");
+            return totalFuelConsumption;
         }
 
         public static double GetTriangularNumber(int n)
