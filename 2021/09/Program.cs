@@ -91,9 +91,16 @@ namespace Day09
                 basinLocationCount.Add(locationsInBasin.Count());
             }
 
+            Console.WriteLine("==============");
+            foreach (var item in basinLocationCount)
+            {
+                Console.WriteLine(item);
+            }
 
+            List<int> threeHighest = basinLocationCount.OrderByDescending(x => x).Take(3).ToList();
+            int mult = threeHighest.Aggregate((x, y) => x * y);
 
-            Console.WriteLine($"Total Basin Locations: {basinLocationCount.Count()}");
+            Console.WriteLine($"Total Basin Locations: {basinLocationCount.Count()} Multiplying their sizes together: {mult}");
         }
 
         static void FindBasinLocations(int[,] array, ref List<(int x, int y)> locationsInBasin, (int x, int y) location)
@@ -110,16 +117,17 @@ namespace Day09
                 //(location.x + 1, location.y + 1),
             };
 
+            // REMEMBER THIS DOESN'T TAKE INTO ACCOUNT DIAGONALS
             try
             {
-                relativeLocations.Add((location.x - 1, location.y - 1));
+                //relativeLocations.Add((location.x - 1, location.y - 1));
                 relativeLocations.Add((location.x, location.y - 1));
-                relativeLocations.Add((location.x + 1, location.y - 1));
+                //relativeLocations.Add((location.x + 1, location.y - 1));
                 relativeLocations.Add((location.x - 1, location.y));
                 relativeLocations.Add((location.x + 1, location.y));
-                relativeLocations.Add((location.x - 1, location.y + 1));
+                //relativeLocations.Add((location.x - 1, location.y + 1));
                 relativeLocations.Add((location.x, location.y + 1));
-                relativeLocations.Add((location.x + 1, location.y + 1));
+                //relativeLocations.Add((location.x + 1, location.y + 1));
             }
             catch (Exception ex)
             {
@@ -129,8 +137,8 @@ namespace Day09
             // For every direction, if there's a 9 or no element stop, otherwise, go again from that location, excluding locations we've already considered
             foreach ((int x, int y) relativeLocation in relativeLocations)
             {
-                int newX = location.x + relativeLocation.x;
-                int newY = location.y + relativeLocation.y;
+                int newX = relativeLocation.x;
+                int newY = relativeLocation.y;
 
                 bool condition1 = IsNotHighPointOrOutOfArray(array, newX, newY);
                 bool condition2 = condition1 ? array[newX, newY] < 9 : false;
