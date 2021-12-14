@@ -39,8 +39,8 @@
                 });
             }
 
-            // Set the number of steps to run (1 lower than expected due to 0 indexing)
-            for (int i = 0; i < 9; i++)
+            // Set the number of steps to run
+            for (int i = 0; i < 10; i++)
             {
                 CompleteStep(ref polymerTemplate, ref lines, rules);
                 //Console.WriteLine($"After step {i+1}: {polymerTemplate}");
