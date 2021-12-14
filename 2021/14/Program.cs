@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using Creek.HelpfulExtensions;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 
 namespace Day14
 {
@@ -135,20 +137,20 @@ namespace Day14
             for (int i = 0; i < temporaryTemplate.Count() - 1; i++)
             {
                 char insertValue;
+                
+                //using ("First".DisposableStopWatch())
+                //{
                 rules.TryGetValue((temporaryTemplate[i], temporaryTemplate[i + 1]), out insertValue);
+                //}
 
-                if (char.IsLetter(insertValue))
-                {
-                    temporaryList.AddAfter(pointer, insertValue);
+                temporaryList.AddAfter(pointer, insertValue);
 
-                    // Move on an extra position as we have added a node
-                    pointer = pointer.Next;
-                }
-
-                pointer = pointer.Next;
+                // Move on an extra position as we have added a node
+                pointer = pointer.Next.Next;
             }
 
             polymerTemplate = String.Join("", temporaryList);
+            //polymerTemplate = string.Concat(temporaryList); // this is slower
         }
 
         static void CompleteStep(ref string polymerTemplate, ref string[] lines, List<Rule> rules)

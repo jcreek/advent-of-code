@@ -14,4 +14,11 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Creek.HelpfulExtensions" Version="1.4.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
+  </ItemGroup>
+
 </Project>
