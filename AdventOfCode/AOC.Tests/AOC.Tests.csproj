@@ -8,17 +8,20 @@
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
+	<ItemGroup>
+		<None Remove="Data\**" />
+		<Content Include="Data\**">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
   <ItemGroup>
+    <PackageReference Include="Creek.HelpfulExtensions" Version="1.4.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
     <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Y2022\Data\" />
-    <Folder Include="Y2022\Tasks\" />
   </ItemGroup>
 
 </Project>
