@@ -9,8 +9,8 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<None Remove="Data\**" />
-		<Content Include="Data\**">
+		<None Remove="Y2021\Data\**" />
+		<Content Include="Y2021\Data\**">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
