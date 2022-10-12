@@ -1,4 +1,4 @@
-namespace AOC.Test.Y2022
+namespace AOC.Tests.Y2022
 {
     public class Day01
     {
