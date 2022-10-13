@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOC.Tests", "AOC.Tests\AOC.Tests.csproj", "{2E0193E1-5DD3-40A6-A07B-C6E58341ACA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayCreator", "DayCreator\DayCreator.csproj", "{BBA91797-9C84-4A8D-9C12-9AE4D3C3EF83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2E0193E1-5DD3-40A6-A07B-C6E58341ACA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E0193E1-5DD3-40A6-A07B-C6E58341ACA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E0193E1-5DD3-40A6-A07B-C6E58341ACA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA91797-9C84-4A8D-9C12-9AE4D3C3EF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA91797-9C84-4A8D-9C12-9AE4D3C3EF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA91797-9C84-4A8D-9C12-9AE4D3C3EF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA91797-9C84-4A8D-9C12-9AE4D3C3EF83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
