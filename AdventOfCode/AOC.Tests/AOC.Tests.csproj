@@ -27,6 +27,13 @@
 		</Content>
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Remove="Y2022\Data\**" />
+		<Content Include="Y2021\Data\**">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Creek.HelpfulExtensions" Version="1.4.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
