@@ -74,7 +74,7 @@ namespace AOC.Tests.Y2022
 9000
 
 10000", 45000)]
-        [TestCase(null, 1783)] // The actual answer
+        [TestCase(null, 203905)] // The actual answer
         public void Part2(string input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
