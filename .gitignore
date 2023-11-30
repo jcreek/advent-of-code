@@ -2,3 +2,5 @@ bin/
 obj/
 .vs/
 .DS_Store
+.idea/
+AdventOfCode/AdventOfCode.sln.DotSettings.user
