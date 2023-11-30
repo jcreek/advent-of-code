@@ -18,6 +18,22 @@ string yearPath = Path.GetFullPath(Path.Combine(newPathBase, "AOC.Tests", $"Y{ye
 string dataPath = Path.GetFullPath(Path.Combine(yearPath, "Data", $"Day{day}.dat"));
 string tasksPath = Path.GetFullPath(Path.Combine(yearPath, "Tasks", $"Day{day}.txt"));
 
+// Check and create missing directories
+if (!Directory.Exists(yearPath))
+{
+    Directory.CreateDirectory(yearPath);
+}
+
+if (!Directory.Exists(Path.Combine(yearPath, "Data")))
+{
+    Directory.CreateDirectory(Path.Combine(yearPath, "Data"));
+}
+
+if (!Directory.Exists(Path.Combine(yearPath, "Tasks")))
+{
+    Directory.CreateDirectory(Path.Combine(yearPath, "Tasks"));
+}
+
 // Create data file
 using (FileStream fs = File.Create(dataPath));
 
