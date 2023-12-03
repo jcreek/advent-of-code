@@ -168,7 +168,7 @@ namespace AOC.Tests.Y2023
                     int number1 = int.Parse(grid[numberCoords[0].Item1, numberCoords[0].Item2].ToString());
                     int number2 = int.Parse(grid[numberCoords[1].Item1, numberCoords[1].Item2].ToString());
                     int gearRatio = number1 * number2;
-                    gearRatios.Add(gearRatio);
+                    // gearRatios.Add(gearRatio);
                 }
             }
             return false;
