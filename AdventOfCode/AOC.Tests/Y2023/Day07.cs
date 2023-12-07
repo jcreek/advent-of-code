@@ -66,7 +66,26 @@ T55J5 684
 KK677 28
 KTJJT 220
 QQQJA 483", 5905)]
-    [TestCase(null, 248804089)] // The actual answer
+    [TestCase(@"2345A 1
+Q2KJJ 13
+Q2Q2Q 19
+T3T3J 17
+T3Q33 11
+2345J 3
+J345A 2
+32T3K 5
+T55J5 29
+KK677 7
+KTJJT 34
+QQQJA 31
+JJJJJ 37
+JAAAA 43
+AAAAJ 59
+AAAAA 61
+2AAAA 23
+2JJJJ 53
+JJJJ2 41", 6839)]
+    [TestCase(null, 248747492)] // The actual answer
     public void Part2(string input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
@@ -223,6 +242,7 @@ public class Hand : IComparable<Hand>
             (cardCounts.Any(c => c.Value == 3) && cardCounts.Any(c => c.Value == 2))
             || (cardCounts.Any(c => c.Value == 3) && jokers == 1)
             || (cardCounts.Any(c => c.Value == 2) && jokers == 2)
+            || (cardCounts.Count(c => c.Value == 2) == 2 && jokers == 1)
         )
         {
             Type = HandType.FullHouse;
