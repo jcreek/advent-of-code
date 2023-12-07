@@ -1,5 +1,3 @@
-using Microsoft.Data.Sqlite;
-
 namespace AOC.Tests.Y2023;
 
 [TestFixture]
@@ -192,7 +190,7 @@ temperature-to-humidity map:
 humidity-to-location map:
 60 56 37
 56 93 4", 46)]
-    [TestCase(null, 1783)] // The actual answer
+    [TestCase(null, 63179500)] // The actual answer
     public void Part2(string input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
@@ -207,13 +205,15 @@ humidity-to-location map:
         almanac.TemperatureToHumidityMap = GetMap(lines, "temperature-to-humidity map:");
         almanac.HumidityToLocationMap = GetMap(lines, "humidity-to-location map:");
 
-        List<long> locations = new();
+        long result = long.MaxValue;
+        object lockObj = new();
 
         List<long> values = lines[0].Split(": ")[1].Split(" ").Select(long.Parse).ToList();
-        for (int i = 0; i < values.Count; i += 2)
+
+        Parallel.For(0, values.Count / 2, i =>
         {
-            long startRange = values[i];
-            long rangeLength = values[i + 1];
+            long startRange = values[i * 2];
+            long rangeLength = values[i * 2 + 1];
 
             for (long seed = startRange; seed < startRange + rangeLength; seed++)
             {
@@ -226,13 +226,15 @@ humidity-to-location map:
                 long humidity = GetValueUsingMaps(almanac.TemperatureToHumidityMap, temperature);
                 long location = GetValueUsingMaps(almanac.HumidityToLocationMap, humidity);
 
-                // Console.WriteLine(
-                //     $"Seed {seed} corresponds to soil {soil}, fertiliser {fertiliser}, water {water}, light {light}, temperature {temperature}, humidity {humidity}, and location {location}");
-                locations.Add(location);
+                lock (lockObj)
+                {
+                    if (location < result)
+                    {
+                        result = location;
+                    }
+                }
             }
-        }
-
-        long result = locations.Min();
+        });
 
         if (expected != null)
         {
