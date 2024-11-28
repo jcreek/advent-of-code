@@ -42,6 +42,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Y2024\Data\**"/>
+    <Content Include="Y2024\Data\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Creek.HelpfulExtensions" Version="1.4.3"/>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
