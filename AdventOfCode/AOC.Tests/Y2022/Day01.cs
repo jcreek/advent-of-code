@@ -29,7 +29,7 @@ namespace AOC.Tests.Y2022
 
 10000", 24000)]
         [TestCase(null, 70764)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -75,7 +75,7 @@ namespace AOC.Tests.Y2022
 
 10000", 45000)]
         [TestCase(null, 203905)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
 

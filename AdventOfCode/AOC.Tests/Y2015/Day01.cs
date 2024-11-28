@@ -24,7 +24,7 @@ namespace AOC.Tests.Y2015
         [TestCase(")))", -3)] // Example data
         [TestCase(")())())", -3)] // Example data
         [TestCase(null, 232)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             var lines = input != null ? input : realData;
 
@@ -45,7 +45,7 @@ namespace AOC.Tests.Y2015
         [TestCase(")", 1)] // Example data
         [TestCase("()())", 5)]
         [TestCase(null, 1783)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             var lines = input != null ? input : realData;
 

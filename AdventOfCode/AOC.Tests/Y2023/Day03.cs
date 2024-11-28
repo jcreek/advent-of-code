@@ -390,7 +390,7 @@ public class Day03
 ...$.*....
 .664.598..", 4361)]
     [TestCase(null, 550934)] // The actual answer
-    public void Part1(string input, int? expected)
+    public void Part1(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -419,7 +419,7 @@ public class Day03
 ...$.*....
 .664.598..", 467835)]
     [TestCase(null, 81997870)] // The actual answer
-    public void Part2(string input, int? expected)
+    public void Part2(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
 

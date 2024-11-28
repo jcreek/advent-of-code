@@ -37,7 +37,7 @@ Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green", 8)]
         [TestCase(null, 1734)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -105,7 +105,7 @@ Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
 Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green", 2286)]
         [TestCase(null, 70387)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
             

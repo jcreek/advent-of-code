@@ -20,7 +20,7 @@ KK677 28
 KTJJT 220
 QQQJA 483", 6440)]
     [TestCase(null, 247815719)] // The actual answer
-    public void Part1(string input, int? expected)
+    public void Part1(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -86,7 +86,7 @@ AAAAA 61
 2JJJJ 53
 JJJJ2 41", 6839)]
     [TestCase(null, 248747492)] // The actual answer
-    public void Part2(string input, int? expected)
+    public void Part2(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
 

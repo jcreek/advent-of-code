@@ -18,7 +18,7 @@ namespace AOC.Tests.Y2015
         [TestCase("2x3x4", 58)]
         [TestCase("1x1x10", 43)]
         [TestCase(null, 1606483)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string[] lines = input != null ? new[] { input } : realData;
 
@@ -53,7 +53,7 @@ namespace AOC.Tests.Y2015
         [TestCase("2x3x4", 34)]
         [TestCase("1x1x10", 14)]
         [TestCase(null, 3842356)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string[] lines = input != null ? new[] { input } : realData;
 

@@ -46,7 +46,7 @@ namespace AOC.Tests.Y2015
         [TestCase("abcdef", 609043)]
         [TestCase("pqrstuv", 1048970)]
         [TestCase(null, 254575)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string lines = input != null ? input : realData;
 
@@ -61,7 +61,7 @@ namespace AOC.Tests.Y2015
         }
 
         [TestCase(null, 1038736)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string lines = input != null ? input : realData;
 

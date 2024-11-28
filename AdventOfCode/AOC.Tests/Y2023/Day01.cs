@@ -21,7 +21,7 @@ pqr3stu8vwx
 a1b2c3d4e5f
 treb7uchet", 142)]
         [TestCase(null, 53080)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -60,7 +60,7 @@ zoneight234
         [TestCase("three2six8two5", 35)]
         [TestCase("eightjzqzhrllg1oneightfck", 88)]
         [TestCase(null, 53268)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
 

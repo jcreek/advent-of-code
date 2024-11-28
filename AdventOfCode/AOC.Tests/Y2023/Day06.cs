@@ -17,7 +17,7 @@ public class Day06
     [TestCase(@"Time:      7  15   30
 Distance:  9  40  200", 288)]
     [TestCase(null, 1660968)] // The actual answer
-    public void Part1(string input, int? expected)
+    public void Part1(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -82,7 +82,7 @@ Distance:  9  40  200", 288)]
     [TestCase(@"Time:      7  15   30
 Distance:  9  40  200", 71503)]
     [TestCase(null, 26499773)] // The actual answer
-    public void Part2(string input, int? expected)
+    public void Part2(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
 

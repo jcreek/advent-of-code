@@ -47,7 +47,7 @@ namespace AOC.Tests.Y2015
         [TestCase("^>v<", 4)]
         [TestCase("^v^v^v^v^v", 2)]
         [TestCase(null, 2565)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string lines = input != null ? input : realData;
             int currentX = 0;
@@ -102,7 +102,7 @@ namespace AOC.Tests.Y2015
         [TestCase("^>v<", 3)]
         [TestCase("^v^v^v^v^v", 11)]
         [TestCase(null, 2639)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string lines = input != null ? input : realData;
             int currentX = 0;

@@ -29,7 +29,7 @@ AAA = (BBB, BBB)
 BBB = (AAA, ZZZ)
 ZZZ = (ZZZ, ZZZ)", 6)]
     [TestCase(null, 19199)] // The actual answer
-    public void Part1(string input, int? expected)
+    public void Part1(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -89,7 +89,7 @@ ZZZ = (ZZZ, ZZZ)", 6)]
 22Z = (22B, 22B)
 XXX = (XXX, XXX)", 6)]
     [TestCase(null, 1783)] // The actual answer
-    public async Task Part2(string input, int? expected)
+    public async Task Part2(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -122,7 +122,7 @@ XXX = (XXX, XXX)", 6)]
             // For each location, follow the instruction
             for (int i = 0; i < currentLocations.Count; i++)
             {
-                int localI = i;  // Local copy of the loop variable
+                int localI = i; // Local copy of the loop variable
                 char instruction = instructions[instructionIndex];
                 tasks[localI] = Task.Factory.StartNew(() =>
                 {

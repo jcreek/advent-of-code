@@ -16,7 +16,7 @@ namespace AOC.Tests.Y2021
 
         [TestCase("199,200,208,210,200,207,240,269,260,263", 7)] // Example data
         [TestCase(null, 1681)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             var lines = input != null ? input.Split(',') : realData;
 
@@ -46,7 +46,7 @@ namespace AOC.Tests.Y2021
 
         [TestCase("199,200,208,210,200,207,240,269,260,263", 5)] // Example data
         [TestCase(null, 1704)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             var lines = input != null ? input.Split(',') : realData;
 

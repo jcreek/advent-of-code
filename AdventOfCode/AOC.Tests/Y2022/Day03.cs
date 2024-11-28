@@ -76,7 +76,7 @@ wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw", 157)]
         [TestCase(null, 8176)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
             List<char> items = new();
@@ -112,7 +112,7 @@ wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw", 70)]
         [TestCase(null, 2689)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
             List<char> items = new();

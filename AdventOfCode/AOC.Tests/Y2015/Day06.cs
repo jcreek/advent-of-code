@@ -93,7 +93,7 @@ namespace AOC.Tests.Y2015
         [TestCase("toggle 0,0 through 999,0", 1000)]
         [TestCase("turn on 0,0 through 999,999/nturn off 499,499 through 500,500", 999996)]
         [TestCase(null, 400410)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("/n") : realData;
 
@@ -121,7 +121,7 @@ namespace AOC.Tests.Y2015
         [TestCase("turn on 0,0 through 0,0", 1)]
         [TestCase("toggle 0,0 through 999,999", 2000000)]
         [TestCase(null, 15343601)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("/n") : realData;
 

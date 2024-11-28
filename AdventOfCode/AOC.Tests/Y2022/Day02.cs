@@ -18,7 +18,7 @@ namespace AOC.Tests.Y2022
 B X
 C Z", 15)]
         [TestCase(null, 8392)] // The actual answer
-        public void Part1(string input, int? expected)
+        public void Part1(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
 
@@ -36,7 +36,7 @@ C Z", 15)]
 B X
 C Z", 12)]
         [TestCase(null, 1783)] // The actual answer
-        public void Part2(string input, int? expected)
+        public void Part2(string? input, int? expected)
         {
             string[] lines = input != null ? input.Split("\n") : realData;
 

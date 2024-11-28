@@ -112,7 +112,7 @@ humidity-to-location map:
 60 56 37
 56 93 4", 35)]
     [TestCase(null, 265018614)] // The actual answer
-    public void Part1(string input, int? expected)
+    public void Part1(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
         Almanac almanac = new();
@@ -191,7 +191,7 @@ humidity-to-location map:
 60 56 37
 56 93 4", 46)]
     [TestCase(null, 63179500)] // The actual answer
-    public void Part2(string input, int? expected)
+    public void Part2(string? input, int? expected)
     {
         string[] lines = input != null ? input.Split("\n") : realData;
         Almanac almanac = new();
