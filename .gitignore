@@ -4,3 +4,4 @@ obj/
 .DS_Store
 .idea/
 AdventOfCode/AdventOfCode.sln.DotSettings.user
+node_modules/
