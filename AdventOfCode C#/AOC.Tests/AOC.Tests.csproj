@@ -21,6 +21,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Y2016\Data\**"/>
+    <Content Include="Y2016\Data\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Y2021\Data\**"/>
     <Content Include="Y2021\Data\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -49,11 +56,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Y2025\Data\**"/>
+    <Content Include="Y2025\Data\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Creek.HelpfulExtensions" Version="1.4.3"/>
-    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
-    <PackageReference Include="NUnit" Version="4.2.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.0"/>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0"/>
+    <PackageReference Include="NUnit" Version="4.2.2"/>
+    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0"/>
     <PackageReference Include="NUnit.Analyzers" Version="4.4.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -62,6 +76,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AOC.Utilities\AOC.Utilities.csproj"/>
   </ItemGroup>
 
 </Project>
