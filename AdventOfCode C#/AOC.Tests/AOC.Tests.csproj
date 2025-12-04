@@ -79,7 +79,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AOC.Utilities\AOC.Utilities.csproj"/>
+    <ProjectReference Include="..\AOC.Helpers\AOC.Helpers.csproj"/>
   </ItemGroup>
 
 </Project>
